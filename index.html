@@ -161,6 +161,22 @@
               "@type": "Answer",
               "text": "يمكن للمتضررين إرسال شهاداتهم وتوثيقاتهم بسرية تامة دون إشارة لحساباتهم عبر بوت تليجرام المخصص: @SendTestimonyBot (https://t.me/SendTestimonyBot)، ومتابعة قناة الشهادات: t.me/rsjlb_testimonies."
             }
+          },
+          {
+            "@type": "Question",
+            "name": "هل التحذير منه وفضح أفعاله يعتبر من الغيبة أو التشهير المحرم؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "كلا؛ بل هو من النصيحة الواجبة شرعاً لحفظ أموال المسلمين وأعراضهم من الصائل والمعتدي. وقد أجمع علماء الأمة على أن القدح ليس بغيبة في مواضع، منها: التظلم، والاستعانة على تغيير المنكر، والتحذير من الشر، والمجاهر بفسقه ومظالمه."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "ما الفرق بين التاجر الذي تعثر وخسر، وبين سلوك أبي عبيدة النقادي؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "التاجر الأمين إذا خسر بتجارة طبيعية صارح شركاءه، وفتح دفاتره ومستنداته بكل شفافية، وقبل بتحكيم الشرع، ولم يتصرف في المال بغير إذن، ولم يخفِ سرقة البضائع، ولم يمارس التدوير المالي (بونزي) ولا الربا، ولم يهدد بالقتل، ولم يتخذ حسابات مستعارة لقذف المحصنات."
+            }
           }
         ]
       }
@@ -207,17 +223,44 @@
       </p>
 
       <div class="target-profile-card">
-        <img src="avatar.jpg" alt="أبو عبيدة النقادي - علي عوض المصري" class="target-avatar" width="100" height="100">
+        <div class="target-avatar-wrap">
+          <img src="avatar.jpg" alt="أبو عبيدة النقادي - علي عوض المصري" class="target-avatar" width="155" height="155">
+          <span class="target-status-badge">مطلوب للعدالة والحقوق</span>
+        </div>
         <div class="target-info">
-          <h3>أبو عبيدة النقادي (الجنرال المنهجي)</h3>
-          <p><strong>الاسم الحقيقي:</strong> علي عوض المصري</p>
-          <p class="target-desc">تستر بالخطاب الشرعي والمظهر المنهجي للاعتداء على أموال وأعراض المسلمين</p>
+          <div class="target-header-tags">
+            <span class="alias-tag danger">النصّابي الكذّابي</span>
+            <span class="alias-tag">الجنرال المنهجي</span>
+          </div>
+          <h3>أبو عبيدة النقادي</h3>
+          <p class="target-real-name"><strong>الاسم الحقيقي:</strong> علي عوض المصري</p>
+          <p class="target-desc">تستر بالخطاب الشرعي والمظهر المنهجي للاعتداء على أموال وأعراض المسلمين، واعتمد تدوير الأموال، والتهديد بالقتل، وقذف المحصنات لإرهاب ضحاياه وتبرير غمط حقوقهم.</p>
+          <div class="target-badges">
+            <span class="info-pill">⚠️ سوابق حبس في التوغو</span>
+            <span class="info-pill">⚖️ شهادة الشيخ الكتاني ضده</span>
+            <span class="info-pill">💣 تهديد بالقتل مسجل بصوته</span>
+          </div>
         </div>
       </div>
 
       <div class="hero-cta">
         <a href="#episodes" class="btn btn-primary btn-lg">شاهد سلسلة النصابي (4 حلقات)</a>
         <a href="https://t.me/rsjlb_testimonies" target="_blank" rel="noopener noreferrer" class="btn btn-telegram btn-lg">قناة الشهادات على تليجرام</a>
+      </div>
+
+      <div class="share-box">
+        <span class="share-label">📢 انشر التحذير وشارك الرابط لحماية المسلمين:</span>
+        <div class="share-buttons">
+          <button class="btn btn-share" id="copyLinkBtn" onclick="copySiteLink()">
+            <span class="share-icon">📋</span> <span id="copyBtnText">نسخ الرابط</span>
+          </button>
+          <a href="https://t.me/share/url?url=https%3A%2F%2Fabu-obaidah-ennaqqadi.github.io%2F&text=%D8%AD%D9%82%D9%8A%D9%82%D8%A9%20%D8%A3%D8%A8%D9%8A%20%D8%B9%D8%A8%D9%8A%D8%AF%D8%A9%20%D8%A7%D9%84%D9%86%D9%82%D8%A7%D8%AF%D9%8A%20(%D8%B9%D9%84%D9%8A%20%D8%B9%D9%88%D8%B6%20%D8%A7%D9%84%D9%85%D8%B5%D8%B1%D9%8A)%20%D8%A8%D8%A7%D9%84%D8%A3%D8%AF%D9%84%D8%A9%20%D9%88%D8%B4%D9%87%D8%A7%D8%AF%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B6%D8%AD%D8%A7%D9%8A%D8%A7" target="_blank" rel="noopener noreferrer" class="btn btn-share btn-share-tg">
+            <span class="share-icon">✈️</span> مشاركة عبر تليجرام
+          </a>
+          <a href="https://api.whatsapp.com/send?text=%D8%AD%D9%82%D9%8A%D9%82%D8%A9%20%D8%A3%D8%A8%D9%8A%20%D8%B9%D8%A8%D9%8A%D8%AF%D8%A9%20%D8%A7%D9%84%D9%86%D9%82%D8%A7%D8%AF%D9%8A%20(%D8%B9%D9%84%D9%8A%20%D8%B9%D9%88%D8%B6%20%D8%A7%D9%84%D9%85%D8%B5%D8%B1%D9%8A)%20%D9%88%D8%B4%D9%87%D8%A7%D8%AF%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B6%D8%AD%D8%A7%D9%8A%D8%A7%3A%20https%3A%2F%2Fabu-obaidah-ennaqqadi.github.io%2F" target="_blank" rel="noopener noreferrer" class="btn btn-share btn-share-wa">
+            <span class="share-icon">💬</span> مشاركة عبر واتساب
+          </a>
+        </div>
       </div>
 
       <div class="stats-bar">
@@ -442,6 +485,36 @@
 
             <div class="expose-grid">
         <div class="expose-card">
+          <div class="expose-icon">📜</div>
+          <h3>شهادة الشيخ الكتّاني واستغلال المشاهير</h3>
+          <p>اعتاد التمسح بالعلماء والمشاهير لإضفاء شرعية مصطنعة على نفسه واستدراج الضحايا. وحين ارتضى شريكه التحاكم للشيخ الشريف الحسن بن علي الكتاني (رئيس رابطة علماء المغرب العربي)، هرب النقادي من تقديم الدفاتر والحسابات، وغلّظ القول، ثم حظر الشاكي وتوعده؛ فشهد الشيخ الكتاني ضده علانية مؤكداً صدق الضحايا ومفنداً ادعاءات النقادي بالتحاكم للشرع.</p>
+        </div>
+
+        <div class="expose-card">
+          <div class="expose-icon">🎭</div>
+          <h3>النرجسية المرضية وعقدة العظمة</h3>
+          <p>يعاني من تضخم نرجسي مريع واستعلاء أجوف؛ ومنهجه العملي الموثق بالقناة: "لا تعتذر أبدًا، لا تتراجع أبدًا، لا تعترف بالخطأ، انكر كل شيء، واهجم ثم اهجم". يرى نفسه معصوماً فوق المحاسبة، ويلقب نفسه بـ«الجنرال المنهجي» مصوراً نفسه ضحية مؤامرة كونية لتبرير خياناته وسرقة أموال الناس.</p>
+        </div>
+
+        <div class="expose-card">
+          <div class="expose-icon">🩸</div>
+          <h3>التهديد بالقتل والتصفية («سأقتلهم خطأ!»)</h3>
+          <p>تجاوزت جرائمه أكل أموال الناس بالباطل إلى التهديد الجنائي الصريح؛ حيث وثقت له تسجيلات صوتية يهدد فيها بقتل وتصفية خصومه قائلاً: "سأقتلهم خطأ!"، معلناً استعداده لدفع مئات آلاف الدولارات في الأذى الأمني والتسول لدفع الرشاوى للزج بالضحايا في السجون بدلاً من رد أموالهم.</p>
+        </div>
+
+        <div class="expose-card">
+          <div class="expose-icon">🕵️‍♂️</div>
+          <h3>الحسابات المستعارة وقذف المحصنات</h3>
+          <p>جبن عن المواجهة المباشرة بهويته الحقيقية؛ فلجأ إلى معرفات وحسابات مستعارة على تليجرام (فضحتها خواص التطبيق برقم هاتفه كمعرف Godwin braquage وغيره) للخوض في أعراض أمهات وزوجات أصحاب الحقوق، وقذف المحصنات بأقذع الألفاظ والشتائم الباطلة التي يعجز عن قولها علناً.</p>
+        </div>
+
+        <div class="expose-card">
+          <div class="expose-icon">🤡</div>
+          <h3>هزلية «قناة البزنس» والإفساد الفكري</h3>
+          <p>أنشأ قناة لبث محاضرات "اقتصاد واستثمار" اتسمت بالجهل المطبق والتضليل؛ كترويجه لأرقام مستحيلة عقلاً كادعاء امتلاك عائلة واحدة 500 تريليون دولار (وهو ما يتجاوز كامل ثروة كوكب الأرض!)، وتسطيح الاقتصاد بنظريات المؤامرة الساذجة لدغدغة عواطف الشباب وإيهامهم بالحنكة لاصطيادهم.</p>
+        </div>
+
+        <div class="expose-card">
           <div class="expose-icon">📉</div>
           <h3>الجهل والتكبر على أهل الخبرة</h3>
           <p>دخل في مشاريع وتجارات دولية كبرى لا يحسن فيها شيئاً، وتكبر بعنجهية على من يحسنونها ورفض نصح واستشارة أهل الاختصاص والخبرة، مما قاد إلى أخطاء فادحة وكوارث مالية متتالية.</p>
@@ -564,6 +637,26 @@
 
         <div class="faq-item">
           <div class="faq-question">
+            <span>هل التحذير منه وفضح أفعاله يُعد من الغيبة أو التشهير المحرم؟</span>
+            <span class="faq-toggle-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            كلا؛ بل هو من النصيحة الواجبة شرعاً لحفظ أموال المسلمين وأعراضهم من الصائل والمعتدي. وقد أجمع علماء الأمة على أن القدح ليس بغيبة في ستة مواضع (كما نص الإمام النووي وغيره): التظلم، والاستعانة على تغيير المنكر، والتحذير من الشر، والمجاهر بفسقه ومظالمه. وكتمان هذه الحقائق عن الناس مع العلم بها خيانة للأمانة ورضا بالظلم ومساعدة للمعتدي على مواصلة احتياله؛ قال الله تعالى: ﴿وَلا تَكُونُوا كَالَّذِينَ قَالُوا سَمِعْنَا وَهُمْ لا يَسْمَعُونَ﴾، وقال: ﴿وَلَا تَكْتُمُوا الشَّهَادَةَ وَمَن يَكْتُمْهَا فَإِنَّهُ آثِمٌ قَلْبُهُ﴾.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>ما الفرق بين التاجر الذي تعثر وخسر، وبين سلوك أبي عبيدة النقادي؟</span>
+            <span class="faq-toggle-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            التاجر الأمين إذا خسر بتجارة طبيعية صَارح شركاءه فوراً، وفتح دفاتره ومستنداته بكل شفافية لأهل الخبرة والمحاسبة، ورضي بتحكيم الشرع، ولم يتصرف في المال بغير إذن، ولم يخفِ سرقة البضائع، ولم يمارس التدوير المالي (بونزي) ولا الربا، ولم يهدد بالقتل («سأقتلهم خطأ!»)، ولم يتخذ حسابات مستعارة لقذف المحصنات. أما النقادي فجمع بين الجهل المطبق، وخيانة الأمانة، والتدوير، والتستر على السرقات، والتهديد الجنائي، والطعن في الأعراض.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
             <span>كيف يمكنني إرسال شهادتي إذا كنت متضرراً؟</span>
             <span class="faq-toggle-icon">+</span>
           </div>
@@ -583,6 +676,20 @@
       <div class="cta-buttons">
         <a href="https://t.me/rsjlb_testimonies" target="_blank" rel="noopener noreferrer" class="btn btn-telegram btn-lg">قناة الشهادات</a>
         <a href="https://www.youtube.com/@sfn-iallouchen" target="_blank" rel="noopener noreferrer" class="btn btn-youtube btn-lg">قناة سفيان إعلوشن</a>
+      </div>
+      
+      <div class="share-box" style="margin: 30px auto 0; background: rgba(0,0,0,0.3); border-color: rgba(255,255,255,0.15);">
+        <span class="share-label">📢 شارك الرابط الآن:</span>
+        <div class="share-buttons">
+          <button class="btn btn-share" onclick="copySiteLink()">
+            <span class="share-icon">📋</span> نسخ الرابط
+          </button>
+          <a href="https://t.me/share/url?url=https%3A%2F%2Fabu-obaidah-ennaqqadi.github.io%2F&text=%D8%AD%D9%82%D9%8A%D9%82%D8%A9%20%D8%A3%D8%A8%D9%8A%20%D8%B9%D8%A8%D9%8A%D8%AF%D8%A9%20%D8%A7%D9%84%D9%86%D9%82%D8%A7%D8%AF%D9%8A%20(%D8%B9%D9%84%D9%8A%20%D8%B9%D9%88%D8%B6%20%D8%A7%D9%84%D9%85%D8%B5%D8%B1%D9%8A)%20%D8%A8%D8%A7%D9%84%D8%A3%D8%AF%D9%84%D8%A9%20%D9%88%D8%B4%D9%87%D8%A7%D8%AF%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B6%D8%AD%D8%A7%D9%8A%D8%A7" target="_blank" rel="noopener noreferrer" class="btn btn-share btn-share-tg">
+            <span class="share-icon">✈️</span> تليجرام
+          </a>
+          <a href="https://api.whatsapp.com/send?text=%D8%AD%D9%82%D9%8A%D9%82%D8%A9%20%D8%A3%D8%A8%D9%8A%20%D8%B9%D8%A8%D9%8A%D8%AF%D8%A9%20%D8%A7%D9%84%D9%86%D9%82%D8%A7%D8%AF%D9%8A%20(%D8%B9%D9%84%D9%8A%20%D8%B9%D9%88%D8%B6%20%D8%A7%D9%84%D9%85%D8%B5%D8%B1%D9%8A)%20%D9%88%D8%B4%D9%87%D8%A7%D8%AF%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B6%D8%AD%D8%A7%D9%8A%D8%A7%3A%20https%3A%2F%2Fabu-obaidah-ennaqqadi.github.io%2F" target="_blank" rel="noopener noreferrer" class="btn btn-share btn-share-wa">
+            <span class="share-icon">💬</span> واتساب
+          </a>
       </div>
     </div>
   </div>
@@ -620,6 +727,45 @@
   </footer>
 
   <script>
+    function copySiteLink() {
+      const url = "https://abu-obaidah-ennaqqadi.github.io/";
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(url).then(() => {
+          showCopyFeedback();
+        }).catch(() => fallbackCopy(url));
+      } else {
+        fallbackCopy(url);
+      }
+    }
+
+    function fallbackCopy(text) {
+      const textArea = document.createElement("textarea");
+      textArea.value = text;
+      textArea.style.position = "fixed";
+      textArea.style.left = "-999999px";
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      try {
+        document.execCommand('copy');
+        showCopyFeedback();
+      } catch (err) {
+        prompt("انسخ الرابط التالي:", text);
+      }
+      document.body.removeChild(textArea);
+    }
+
+    function showCopyFeedback() {
+      const btnText = document.getElementById('copyBtnText');
+      if (btnText) {
+        const orig = btnText.textContent;
+        btnText.textContent = 'تم النسخ بنجاح! ✓';
+        setTimeout(() => { btnText.textContent = orig; }, 2500);
+      } else {
+        alert('تم نسخ رابط الموقع بنجاح!');
+      }
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.faq-item').forEach(item => {
         item.querySelector('.faq-question').addEventListener('click', () => {
