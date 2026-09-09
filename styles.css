@@ -329,7 +329,70 @@ img { max-width: 100%; }
   gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 56px;
+  margin-bottom: 28px;
+}
+
+/* Quick Referral Hub */
+.quick-hub {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 0 auto 36px;
+  max-width: 860px;
+}
+.hub-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(135deg, rgba(26, 32, 44, 0.9), rgba(15, 20, 28, 0.95));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.25s ease;
+  position: relative;
+}
+.hub-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary);
+  background: rgba(229, 62, 62, 0.08);
+}
+.hub-card.tg:hover {
+  border-color: var(--telegram-color);
+  background: rgba(34, 158, 217, 0.08);
+}
+.hub-card.bot:hover {
+  border-color: var(--accent);
+  background: rgba(214, 158, 46, 0.08);
+}
+.hub-icon {
+  font-size: 2.2rem;
+  flex-shrink: 0;
+}
+.hub-text {
+  flex: 1;
+  text-align: right;
+}
+.hub-text h4 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 3px;
+}
+.hub-text p {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+.hub-arrow {
+  font-size: 1.6rem;
+  color: var(--text-dim);
+  transition: transform 0.2s;
+}
+.hub-card:hover .hub-arrow {
+  transform: translateX(-4px);
+  color: #fff;
 }
 
 /* Stats */
@@ -783,6 +846,7 @@ section { padding: 80px 0; }
   .share-box { flex-direction: column; text-align: center; gap: 14px; padding: 16px; }
   .share-buttons { justify-content: center; width: 100%; }
   .btn-share { flex: 1 1 calc(50% - 10px); justify-content: center; }
+  .quick-hub { grid-template-columns: 1fr; gap: 12px; }
   .main-nav ul { display: none; }
   .logo-text h1 { font-size: 1.4rem; }
 }
