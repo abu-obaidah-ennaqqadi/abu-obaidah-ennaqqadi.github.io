@@ -249,6 +249,7 @@ img { max-width: 100%; }
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
+  margin-top: 6px;
 }
 .info-pill {
   display: inline-flex;
