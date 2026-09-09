@@ -185,6 +185,7 @@
   </script>
 </head>
 <body>
+  <canvas id="bgCanvas"></canvas>
 
   <header class="site-header">
     <div class="container nav-wrap">
@@ -231,7 +232,7 @@
           <div class="target-badges">
             <span class="info-pill">⚠️ سوابق حبس في التوغو</span>
             <span class="info-pill">⚖️ شهادة الشيخ الكتاني بما جرى</span>
-            <span class="info-pill">🔪 تهديد بالقتل والتصفية («سأقتلهم خطأ!»)</span>
+            <span class="info-pill">🔪 التهديد الصريح بالقتل والتصفية الأمنيّة</span>
             <span class="info-pill">📢 الهروب من المباهلة بعد فضح أفعاله</span>
           </div>
         </div>
@@ -521,8 +522,8 @@
 
         <div class="expose-card">
           <div class="expose-icon">🩸</div>
-          <h3>التهديد بالقتل والتصفية («سأقتلهم خطأ!»)</h3>
-          <p>تجاوزت ممارساته أكل أموال الناس بالباطل إلى التهديد الجنائي؛ حيث وثقت القناة تصريحه وتهديده بقتل وتصفية خصومه متعللاً بعبارته الشهيرة: "سأقتلهم خطأ!"، معلناً استعداده لدفع مئات آلاف الدولارات في الأذى الأمني والتسول لدفع الرشاوى للزج بالضحايا في السجون بدلاً من رد أموالهم وحقوقهم.</p>
+          <h3>التهديد بالتصفية («سأقتلهم خطأ!») والتسول الأمني</h3>
+          <p>تجاوزت ممارساته أكل أموال الناس بالباطل إلى التهديد الجنائي؛ حيث وثقت القناة إعلانه الصريح استعداده لدفع مئات آلاف الدولارات في الأذى الأمني والتسول لدفع الرشاوى للزج بالضحايا وخصومه في السجون وإيذائهم بدلاً من رد أموالهم وحقوقهم، متوعداً بالبطش ومعبراً عن ذلك بما لخصته القناة بالتهديد بالتصفية تحت ذريعة الخطأ.</p>
         </div>
 
         <div class="expose-card">
@@ -803,6 +804,116 @@
           if (!wasActive) item.classList.add('active');
         });
       });
+
+      // Interactive Dynamic Particle Mesh Background
+      const canvas = document.getElementById('bgCanvas');
+      if (canvas) {
+        const ctx = canvas.getContext('2d');
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
+        let particles = [];
+        const numParticles = Math.min(Math.floor(width * 0.04), 60);
+
+        let mouse = { x: -1000, y: -1000, radius: 140 };
+
+        window.addEventListener('resize', () => {
+          width = canvas.width = window.innerWidth;
+          height = canvas.height = window.innerHeight;
+        });
+
+        window.addEventListener('mousemove', (e) => {
+          mouse.x = e.clientX;
+          mouse.y = e.clientY;
+        });
+
+        window.addEventListener('mouseleave', () => {
+          mouse.x = -1000;
+          mouse.y = -1000;
+        });
+
+        class Particle {
+          constructor() {
+            this.x = Math.random() * width;
+            this.y = Math.random() * height;
+            this.vx = (Math.random() - 0.5) * 0.6;
+            this.vy = (Math.random() - 0.5) * 0.6;
+            this.radius = Math.random() * 2 + 1;
+            this.color = Math.random() > 0.4 ? 'rgba(229, 62, 62, ' : 'rgba(246, 173, 85, ';
+            this.alpha = Math.random() * 0.35 + 0.15;
+          }
+          update() {
+            this.x += this.vx;
+            this.y += this.vy;
+
+            if (this.x < 0) this.x = width;
+            if (this.x > width) this.x = 0;
+            if (this.y < 0) this.y = height;
+            if (this.y > height) this.y = 0;
+
+            // Interactive response to mouse
+            const dx = mouse.x - this.x;
+            const dy = mouse.y - this.y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < mouse.radius) {
+              const force = (mouse.radius - dist) / mouse.radius;
+              this.x -= (dx / dist) * force * 3;
+              this.y -= (dy / dist) * force * 3;
+            }
+          }
+          draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            ctx.fillStyle = this.color + this.alpha + ')';
+            ctx.fill();
+          }
+        }
+
+        for (let i = 0; i < numParticles; i++) {
+          particles.push(new Particle());
+        }
+
+        function animate() {
+          ctx.clearRect(0, 0, width, height);
+
+          for (let i = 0; i < particles.length; i++) {
+            particles[i].update();
+            particles[i].draw();
+
+            for (let j = i + 1; j < particles.length; j++) {
+              const dx = particles[i].x - particles[j].x;
+              const dy = particles[i].y - particles[j].y;
+              const dist = Math.sqrt(dx * dx + dy * dy);
+
+              if (dist < 120) {
+                ctx.beginPath();
+                ctx.moveTo(particles[i].x, particles[i].y);
+                ctx.lineTo(particles[j].x, particles[j].y);
+                const alpha = (1 - dist / 120) * 0.12;
+                ctx.strokeStyle = `rgba(229, 62, 62, ${alpha})`;
+                ctx.lineWidth = 0.8;
+                ctx.stroke();
+              }
+            }
+
+            // Connect to cursor
+            const dxMouse = mouse.x - particles[i].x;
+            const dyMouse = mouse.y - particles[i].y;
+            const distMouse = Math.sqrt(dxMouse * dxMouse + dyMouse * dyMouse);
+            if (distMouse < 110) {
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(mouse.x, mouse.y);
+              const alpha = (1 - distMouse / 110) * 0.25;
+              ctx.strokeStyle = `rgba(246, 173, 85, ${alpha})`;
+              ctx.lineWidth = 1;
+              ctx.stroke();
+            }
+          }
+
+          requestAnimationFrame(animate);
+        }
+        animate();
+      }
     });
   </script>
 </body>
