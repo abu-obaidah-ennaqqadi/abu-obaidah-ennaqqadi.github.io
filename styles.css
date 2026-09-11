@@ -11,8 +11,8 @@
   --text-muted: #94a3b8;
   --text-dim: #8899b0;
   --border: rgba(42, 53, 72, 0.8);
-  --telegram-color: #1a7fc1;
-  --telegram-dark: #15679e;
+  --telegram-color: #0e639c;
+  --telegram-dark: #0a4d7a;
   --youtube-color: #FF0000;
   --radius: 16px;
   --radius-sm: 10px;
@@ -285,13 +285,13 @@ img { max-width: 100%; }
   border-color: #155d8e;
 }
 .btn-share-wa {
-  background: #1a8a3e;
-  border-color: #1a8a3e;
+  background: #11692e;
+  border-color: #11692e;
   color: #fff;
 }
 .btn-share-wa:hover {
-  background: #1eb956;
-  border-color: #1eb956;
+  background: #0d5424;
+  border-color: #0d5424;
 }
 
 /* Hero Links Bar */

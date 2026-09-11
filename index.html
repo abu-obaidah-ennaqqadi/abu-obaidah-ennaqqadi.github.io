@@ -35,7 +35,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap"></noscript>
   <link rel="stylesheet" href="styles.css">
 
   <script type="application/ld+json">
@@ -801,7 +803,12 @@
         let width = canvas.width = window.innerWidth;
         let height = canvas.height = window.innerHeight;
         let particles = [];
-        const numParticles = Math.min(Math.floor(width * 0.04), 60);
+        const numParticles = Math.min(Math.floor(width * 0.03), 40);
+        let isVisible = true;
+        document.addEventListener('visibilitychange', () => {
+          isVisible = !document.hidden;
+          if (isVisible) requestAnimationFrame(animate);
+        });
 
         let mouse = { x: -1000, y: -1000, radius: 140 };
 
@@ -862,6 +869,7 @@
         }
 
         function animate() {
+          if (!isVisible) return;
           ctx.clearRect(0, 0, width, height);
 
           for (let i = 0; i < particles.length; i++) {
