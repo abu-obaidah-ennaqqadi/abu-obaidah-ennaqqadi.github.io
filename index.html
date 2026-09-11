@@ -11,7 +11,7 @@
   <link rel="canonical" href="https://abu-obaidah-ennaqqadi.github.io/">
 
   <!-- Preload LCP image -->
-  <link rel="preload" as="image" href="avatar.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="avatar.webp" type="image/webp" fetchpriority="high">
 
   <meta property="og:locale" content="ar_AR">
   <meta property="og:type" content="website">
@@ -35,7 +35,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
   <script type="application/ld+json">
@@ -209,7 +209,10 @@
 
       <div class="target-profile-card">
         <div class="target-avatar-wrap">
-          <img src="avatar.jpg" alt="أبو عبيدة النقادي - علي عوض أحمد علي" class="target-avatar" width="250" height="250" fetchpriority="high" loading="eager">
+          <picture>
+            <source srcset="avatar.webp" type="image/webp">
+            <img src="avatar.jpg" alt="أبو عبيدة النقادي - علي عوض أحمد علي" class="target-avatar" width="250" height="250" fetchpriority="high" loading="eager">
+          </picture>
         </div>
         <div class="target-info">
           <h2 class="target-title">أبو عبيدة النقادي</h2>
@@ -273,8 +276,14 @@
           <span class="ep-num">الحلقة 1</span>
           <h3>نصب على شخصين من السويد في مائة ألف دولار</h3>
         </div>
-        <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/1lH3ccD5pr0" title="سلسلة النصابي - الحلقة 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+        <div class="video-wrapper yt-facade" data-vid="1lH3ccD5pr0" data-title="سلسلة النصابي - الحلقة 1">
+          <img src="https://img.youtube.com/vi/1lH3ccD5pr0/hqdefault.jpg" alt="سلسلة النصابي - الحلقة 1" class="yt-thumb" loading="lazy" width="480" height="360">
+          <button class="yt-play-btn" aria-label="تشغيل فيديو سلسلة النصابي - الحلقة 1">
+            <svg viewBox="0 0 68 48" width="68" height="48">
+              <path class="yt-play-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path>
+              <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+            </svg>
+          </button>
         </div>
         <div class="video-summary">
           <p>محمد ومازن — سوري ولبناني مقيمان في السويد — وثقا في النقادي بسبب مظهره الشرعي وخطابه المنهجي، فسلماه <strong>100,000 دولار</strong> لمشروع استثماري في تجارة «سماد اليوريا»، ليتبين أنه مشروع وهمي لا وجود له. المماطلة والتسويف والتهرب حتى اليأس.</p>
@@ -315,8 +324,14 @@
           <span class="ep-num">الحلقة 2</span>
           <h3>نصب على شاب مغربي في ماله واستغلاله في إفريقيا</h3>
         </div>
-        <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/vZ3g9S1YmsM" title="سلسلة النصابي - الحلقة 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+        <div class="video-wrapper yt-facade" data-vid="vZ3g9S1YmsM" data-title="سلسلة النصابي - الحلقة 2">
+          <img src="https://img.youtube.com/vi/vZ3g9S1YmsM/hqdefault.jpg" alt="سلسلة النصابي - الحلقة 2" class="yt-thumb" loading="lazy" width="480" height="360">
+          <button class="yt-play-btn" aria-label="تشغيل فيديو سلسلة النصابي - الحلقة 2">
+            <svg viewBox="0 0 68 48" width="68" height="48">
+              <path class="yt-play-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path>
+              <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+            </svg>
+          </button>
         </div>
         <div class="video-summary">
           <p>شاب مغربي كان يعمل في شركة مرموقة، أقنعه النقادي بترك وظيفته وسلبه <strong>17,000 دولار</strong> كحصة في مشروع تجاري، ثم استغله في إفريقيا وتركه مديوناً في دوامة من الأكاذيب والتهديدات بالتشهير.</p>
@@ -357,8 +372,14 @@
           <span class="ep-num">الحلقة 3</span>
           <h3>شهادة الشيخ يوشع من دولة توغو</h3>
         </div>
-        <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/4_gIxo0KSJI" title="سلسلة النصابي - الحلقة 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+        <div class="video-wrapper yt-facade" data-vid="4_gIxo0KSJI" data-title="سلسلة النصابي - الحلقة 3">
+          <img src="https://img.youtube.com/vi/4_gIxo0KSJI/hqdefault.jpg" alt="سلسلة النصابي - الحلقة 3" class="yt-thumb" loading="lazy" width="480" height="360">
+          <button class="yt-play-btn" aria-label="تشغيل فيديو سلسلة النصابي - الحلقة 3">
+            <svg viewBox="0 0 68 48" width="68" height="48">
+              <path class="yt-play-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path>
+              <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+            </svg>
+          </button>
         </div>
         <div class="video-summary">
           <p>شهادة استثنائية للشيخ <strong>يوشع كولي ساما</strong> — إمام وخطيب وداعية في توغو — استضاف النقادي في بيته ومحيطه أكثر من 10 سنوات. يكشف فيها حقيقة تعاملاته، ويدعوه للتوبة ورد المظالم.</p>
@@ -404,8 +425,14 @@
           <span class="ep-num">الحلقة 4</span>
           <h3>كيف تبخرت 2 مليون دولار</h3>
         </div>
-        <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/pGtAoLMOPEs" title="سلسلة النصابي - الحلقة 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+        <div class="video-wrapper yt-facade" data-vid="pGtAoLMOPEs" data-title="سلسلة النصابي - الحلقة 4">
+          <img src="https://img.youtube.com/vi/pGtAoLMOPEs/hqdefault.jpg" alt="سلسلة النصابي - الحلقة 4" class="yt-thumb" loading="lazy" width="480" height="360">
+          <button class="yt-play-btn" aria-label="تشغيل فيديو سلسلة النصابي - الحلقة 4">
+            <svg viewBox="0 0 68 48" width="68" height="48">
+              <path class="yt-play-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path>
+              <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+            </svg>
+          </button>
         </div>
         <div class="video-summary">
           <p>الحلقة الأخطر — كيف استولى النقادي على ما يزيد عن <strong>مليوني دولار</strong> من مستثمرين ورجال أعمال ومغتربين بدعوى مشاريع دولية في سماد اليوريا وغيرها، ثم تبخرت الأموال كلها بين عقود صورية وشركات وهمية وأكاذيب متلاحقة.</p>
@@ -757,6 +784,15 @@
         });
       });
 
+      // High-performance YouTube Facade click-to-load
+      document.querySelectorAll('.yt-facade').forEach(facade => {
+        facade.addEventListener('click', function() {
+          const vid = this.dataset.vid;
+          const title = this.dataset.title || '';
+          this.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${vid}?autoplay=1&rel=0" title="${title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+        });
+      });
+
       // Interactive Dynamic Particle Mesh Background — deferred for performance
       const initCanvas = () => {
       const canvas = document.getElementById('bgCanvas');
@@ -876,13 +912,27 @@
     });
   </script>
 
-  <!-- Google tag (gtag.js) — deferred for performance -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S3DKYS8YCT"></script>
+  <!-- Google tag (gtag.js) — optimized lazy loading -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-S3DKYS8YCT');
+    function initAnalytics() {
+      if (window._gtagInitialized) return;
+      window._gtagInitialized = true;
+      const s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-S3DKYS8YCT';
+      document.body.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-S3DKYS8YCT');
+    }
+    const events = ['scroll', 'touchstart', 'mousemove', 'keydown'];
+    const triggerAnalytics = () => {
+      initAnalytics();
+      events.forEach(e => window.removeEventListener(e, triggerAnalytics));
+    };
+    events.forEach(e => window.addEventListener(e, triggerAnalytics, { passive: true, once: true }));
+    setTimeout(initAnalytics, 4000);
   </script>
 </body>
 </html>
