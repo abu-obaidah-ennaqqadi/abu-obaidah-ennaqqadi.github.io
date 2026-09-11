@@ -201,6 +201,7 @@
     </div>
   </header>
 
+  <main>
   <!-- Hero -->
   <section class="hero" id="about">
     <div class="container">
@@ -647,6 +648,8 @@
     </div>
   </section>
 
+  </main>
+
   <!-- دعوة -->
   <div class="container">
     <div class="cta-banner">
@@ -677,11 +680,11 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-info">
-          <h4>شهادات ضحايا أبي عبيدة النقادي</h4>
+          <p class="footer-brand-title">شهادات ضحايا أبي عبيدة النقادي</p>
           <p>نصح وتحذير وتوثيق لصيانة أموال وأعراض المسلمين ونصرة المظلومين بالأدلة والشهادات.</p>
         </div>
         <div class="footer-links">
-          <h5>روابط مباشرة</h5>
+          <p class="footer-links-title">روابط مباشرة</p>
           <ul>
             <li><a href="https://t.me/rsjlb_testimonies" target="_blank" rel="noopener noreferrer">قناة الشهادات (تليجرام)</a></li>
             <li><a href="https://t.me/SendTestimonyBot" target="_blank" rel="noopener noreferrer">بوت إرسال الشهادات (@SendTestimonyBot)</a></li>
@@ -689,7 +692,7 @@
           </ul>
         </div>
         <div class="footer-links">
-          <h5>أقسام الموقع</h5>
+          <p class="footer-links-title">أقسام الموقع</p>
           <ul>
             <li><a href="#about">عن القضية</a></li>
             <li><a href="#episodes">يوتيوب</a></li>
@@ -754,7 +757,8 @@
         });
       });
 
-      // Interactive Dynamic Particle Mesh Background
+      // Interactive Dynamic Particle Mesh Background — deferred for performance
+      const initCanvas = () => {
       const canvas = document.getElementById('bgCanvas');
       if (canvas) {
         const ctx = canvas.getContext('2d');
@@ -862,6 +866,12 @@
           requestAnimationFrame(animate);
         }
         animate();
+      }
+      }; // end initCanvas
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(initCanvas, { timeout: 2000 });
+      } else {
+        setTimeout(initCanvas, 200);
       }
     });
   </script>

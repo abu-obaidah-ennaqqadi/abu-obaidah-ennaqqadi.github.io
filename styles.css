@@ -1,7 +1,7 @@
 /* ========== CSS Variables & Reset ========== */
 :root {
-  --primary: #e53e3e;
-  --primary-dark: #c53030;
+  --primary: #c0392b;
+  --primary-dark: #a93226;
   --accent: #f6ad55;
   --bg-deep: #0a0e17;
   --bg-card: rgba(19, 25, 38, 0.85);
@@ -9,10 +9,10 @@
   --surface: #1e293b;
   --text: #e2e8f0;
   --text-muted: #94a3b8;
-  --text-dim: #64748b;
+  --text-dim: #8899b0;
   --border: rgba(42, 53, 72, 0.8);
-  --telegram-color: #26A5E4;
-  --telegram-dark: #1e8bc3;
+  --telegram-color: #1a7fc1;
+  --telegram-dark: #15679e;
   --youtube-color: #FF0000;
   --radius: 16px;
   --radius-sm: 10px;
@@ -276,17 +276,17 @@ img { max-width: 100%; }
   border-color: #fff;
 }
 .btn-share-tg {
-  background: #229ED9;
-  border-color: #229ED9;
+  background: #1a6fa8;
+  border-color: #1a6fa8;
   color: #fff;
 }
 .btn-share-tg:hover {
-  background: #1b85b8;
-  border-color: #1b85b8;
+  background: #155d8e;
+  border-color: #155d8e;
 }
 .btn-share-wa {
-  background: #25D366;
-  border-color: #25D366;
+  background: #1a8a3e;
+  border-color: #1a8a3e;
   color: #fff;
 }
 .btn-share-wa:hover {
@@ -760,6 +760,20 @@ section { padding: 80px 0; }
   transition: color 0.2s;
 }
 .footer-links a:hover { color: var(--telegram-color); }
+.footer-brand-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+.footer-links-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
 .footer-bottom {
   border-top: 1px solid var(--border);
   padding-top: 24px;
