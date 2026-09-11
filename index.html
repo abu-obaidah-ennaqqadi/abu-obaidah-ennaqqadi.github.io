@@ -913,11 +913,14 @@
         animate();
       }
       }; // end initCanvas
-      if ('requestIdleCallback' in window) {
-        requestIdleCallback(initCanvas, { timeout: 2000 });
-      } else {
-        setTimeout(initCanvas, 200);
-      }
+      let canvasStarted = false;
+      const startCanvas = () => {
+        if (canvasStarted) return;
+        canvasStarted = true;
+        initCanvas();
+      };
+      ['mousemove', 'touchstart', 'scroll'].forEach(e => window.addEventListener(e, startCanvas, { once: true, passive: true }));
+      setTimeout(startCanvas, 4000);
     });
   </script>
 
